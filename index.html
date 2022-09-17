@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+        <title>Tip Calculator</title>
+        <!--  Bootstrap css file-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+<div class="container-fluid w-50 bg-my  mt-5">
+    <div class="row ">
+        <div class="col">
+            <h2 class="text-center">Tip Calculator</h2>
+        </div>
+    </div>
+    <hr class="border border-dark">
+    <div class="row mt-5">
+        <div class="col-md-6 border-right border-secondary">
+           <!-- <form>-->
+                <div class="form-group  mt-4">
+                    <label for="bill" class="h5 p-2">Bill</label>
+                <input type="text" class="form-control  text-center" onkeypress=" return onlyNumberKey(event)" id="bill" placeholder="Bill_Amount" required/> 
+                </div>
+                <div class="form-group  mt-4">
+                    <label for="tip" class="h5 p-2">Tip %</label>
+                    <div class="input-group">
+                           
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary button-tip-subtract " type="button" id="button-subtract"><bold class="font-weight-bold ">-</bold></button>
+                        </div>
+                        
+                        <input type="text" class="form-control text-center " id="tip" placeholder="tip %" onkeypress="return onlyNumberKey(event)" value="0" />
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary button-tip-addition" type="button" id="button-addition"><span class="font-weight-bold"> +</span></button>
+                        </div>
+                    
+                    </div> 
+                </div>
+                <div class="form-group  mt-4">
+                    <label for="no_people" class="h5 p-2">Number of People</label>
+                    <div class="input-group">
+                           
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary button-people-subtract " type="button" id="button-subtract"><bold class="font-weight-bold ">-</bold></button>
+                        </div>
+                        <input type="text" class="form-control  text-center" id="no_people" placeholder="1" onkeypress="return onlyNumberKey(event)" value="1" />
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary button-people-addition" type="button" id="button-addition"><span class="font-weight-bold"> +</span></button>
+                          </div>
+                    
+                    </div> 
+                </div>
+                <div class="mt-4 text-center">
+                    <button class="btn btn-outline-dark calcBtn">Calculate</button>
+            </div>
+            <!--</form>-->
+        </div>
+        <div class="col-md-6 ans">
+            <div class="row  p-3 mt-5">
+                <div class="col-md-6 ">
+                    <p class="h3"> Tip :-></p>
+                    <p class="">Per Person</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="h3" id="ans_tip_per_person"> </p>
+                </div>
+            </div>
+            <div class="row my-margin-top1 p-3 mt-5">
+                <div class="col-md-6 ">
+                    <p class="h3"> Total :-> </p>
+                    <p class="">Per Person</p>
+                </div>
+                <div class="col-md-6 ">
+                    <p class="h3" id="ans_total_per_person">  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+     <!-- bootstrap js file-->
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.js"></script>
+     <script src="js/myjs.js" type="module"></script>
+     <script src="js/mainjs.js"></script>
+</body>
+</html>
